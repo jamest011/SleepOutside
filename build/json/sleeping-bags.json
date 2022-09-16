@@ -35,9 +35,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -93,9 +97,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "LH"
         ]
+=======
+        "ZIPPER": ["LH"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -196,12 +204,17 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "LENGTH": [
           "REG"
         ],
         "ZIPPER": [
           "R"
         ]
+=======
+        "LENGTH": ["REG"],
+        "ZIPPER": ["R"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -323,9 +336,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -370,9 +387,13 @@
         "ExtraImages": null
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "HAND": [
           "LH"
         ]
+=======
+        "HAND": ["LH"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -422,9 +443,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -474,9 +499,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -526,9 +555,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -578,9 +611,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -630,9 +667,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -730,9 +771,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -1018,9 +1063,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "L"
         ]
+=======
+        "ZIPPER": ["L"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -1070,9 +1119,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "R"
         ]
+=======
+        "ZIPPER": ["R"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
@@ -1122,9 +1175,13 @@
         ]
       },
       "SizesAvailable": {
+<<<<<<< HEAD
         "ZIPPER": [
           "RH"
         ]
+=======
+        "ZIPPER": ["RH"]
+>>>>>>> f682a2fa143d94274bb4a83f9f83b90f9705de17
       },
       "Colors": [
         {
