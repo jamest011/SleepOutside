@@ -108,6 +108,22 @@ button {
 .cart:hover svg {
   fill: gray;
 }
+.cart::before {
+  position: absolute;
+  content: attr(data-product-count);
+
+  top: .3rem;
+  right: .3rem;
+
+  width: 1rem;
+  height: 1rem;
+  color: #fff;
+  background-color: #18702b;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.1rem;
+  font-family: sans-serif;
+}
 
 /* End cart icon styles */
 
