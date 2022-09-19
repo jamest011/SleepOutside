@@ -1,6 +1,6 @@
 let products = [];
 
-// This function takes in an fetch response objct 
+// This function takes in an fetch response objct
 // and converst the content to JSON format
 function convertToJson(res) {
   if (res.ok) {
