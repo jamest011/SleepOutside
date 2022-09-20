@@ -13,6 +13,6 @@ function getProductsData(){
 }
 function addToCart(t){
     const e = products.find(n=>n.Id === t.target.dataset.id);
-    setLocalStorage('addToCart',e)
+    setLocalStorage('so-cart',e)
 }
 getProductsData(),document.getElementById('addToCart').addEventListener('click',addToCart);
