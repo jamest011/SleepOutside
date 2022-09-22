@@ -1,6 +1,6 @@
-import ProductData from './productData.js';
 import ProductDetails from './productDetails.js';
 import { getParam } from './utils.js';
+import ProductData from './productData.js';
 
 const dataSource = new ProductData('tents');
 const productId = getParam('product');
