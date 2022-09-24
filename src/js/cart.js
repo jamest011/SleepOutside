@@ -1,9 +1,9 @@
+import {getLocalStorage} from './utils.js';
+
 const shopping_cart = document.querySelector('.cart')
 let cart_buttons = document.querySelectorAll('.addToCart')
 
-function getLocalStorage(key) {
-  return JSON.parse(localStorage.getItem(key));
-}
+
 
 function getCartContents() {
   let markup = '';

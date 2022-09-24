@@ -1,4 +1,4 @@
-import { setLocalStorage } from './utils.js';
+import { setLocalStorage,getLocalStorage } from './utils.js';
 
 export default class ProductDetails {
   constructor(productId, dataSource){
@@ -14,9 +14,30 @@ export default class ProductDetails {
     document.getElementById('addToCart')
             .addEventListener('click', this.addToCart.bind(this));
   }
+  productInCart(cart){
+   return cart.filter((product)=>product.Id == this.product.Id).length > 0;
+  }
+
   addToCart() {
-    
-    setLocalStorage('so-cart', this.product);
+     //Check if there is any data for the cart in local storage
+     let cart = getLocalStorage('so-cart');
+     if (cart == null){
+      cart = [];
+      this.product.count = 1;
+      cart.push(this.product);
+        setLocalStorage('so-cart', cart);
+     }else if (!this.productInCart(cart)){
+      this.product.count = 1;
+      cart.push(this.product);
+      setLocalStorage('so-cart', cart);
+     }else {
+      for(let iProduct = 0; iProduct < cart.length ; iProduct++){
+        if(cart[iProduct].Id == this.product.Id){
+          cart[iProduct].count++;
+          break;
+        }
+      }
+    }
   }
   renderProductDetails() {
     return `<section class="product-detail"> <h3>${this.product.Brand.Name}</h3>

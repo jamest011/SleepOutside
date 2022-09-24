@@ -33,3 +33,4 @@ export function renderListWithTemplate(template, parent, list, callback) {
     parent.appendChild(templateWithData);
   })
 }
+
