@@ -1,15 +1,15 @@
 const shopping_cart = document.querySelector('.cart')
-const cart_buttons = document.querySelectorAll('.addToCart')
+let cart_buttons = document.querySelectorAll('.addToCart')
 
 function getLocalStorage(key) {
   return JSON.parse(localStorage.getItem(key));
 }
 
 function getCartContents() {
-  let markup = "";
-  const cartItems = getLocalStorage("so-cart");
+  let markup = '';
+  const cartItems = getLocalStorage('so-cart');
   const htmlItems = cartItems.map((item) => renderCartItem(item));
-  document.querySelector(".product-list").innerHTML = htmlItems.join("");
+  document.querySelector('.product-list').innerHTML = htmlItems.join('');
   // document.querySelector(".product-list").innerHTML = renderCartItem(cartItems);
 }
 
