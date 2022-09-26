@@ -11,7 +11,40 @@ function getCartContents() {
   const htmlItems = cartItems.map((item) => renderCartItem(item));
   document.querySelector('.product-list').innerHTML = htmlItems.join('');
   // document.querySelector(".product-list").innerHTML = renderCartItem(cartItems);
+  displayCartFooter();
 }
+
+function displayCartFooter() {
+  let cartItems = getLocalStorage('so-cart'); 
+  // check if the so-cart is not null
+  if (cartItems !== null){
+    // check if so-cart is not empty
+    if(cartItems.length > 0) { 
+      let totalCost = 0;
+      // calculate
+        //loop through every product in the cart 
+      for (let iItem = 0; iItem < cartItems.length; iItem++){
+        //multiply count * final price
+        const currentProduct = cartItems[iItem];
+        const finalPrice = currentProduct.FinalPrice;
+        const productCount = currentProduct.count;
+        const totalItemPrice = finalPrice * productCount;
+        //increase totalCost
+        totalCost += totalItemPrice;
+
+      }
+      
+      //Update total in HTMl 
+      document.getElementById('cart-total').textContent = 'Total:  $' + totalCost;
+
+      // remove the hiden class from the cart-footer element
+      const cartFooter = document.querySelector('.cart-footer');
+      //  remove a class form an element usign javascript?
+      cartFooter.classList.remove('hide');
+    } 
+  }
+}
+
 
 function renderCartItem(item) {
   const newItem = `<li class="cart-card divider">

@@ -17,7 +17,6 @@ export default class ProductDetails {
   productInCart(cart){
    return cart.filter((product)=>product.Id == this.product.Id).length > 0;
   }
-
   addToCart() {
      //Check if there is any data for the cart in local storage
      let cart = getLocalStorage('so-cart');
@@ -34,6 +33,7 @@ export default class ProductDetails {
       for(let iProduct = 0; iProduct < cart.length ; iProduct++){
         if(cart[iProduct].Id == this.product.Id){
           cart[iProduct].count++;
+          setLocalStorage('so-cart', cart);  
           break;
         }
       }
