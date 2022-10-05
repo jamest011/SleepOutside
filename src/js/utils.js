@@ -34,10 +34,10 @@ export function getParam(param) {
   return urlParams.get(param);
 }
 
-export function renderListWithTemplate(template, parent, list, callback) {
+export function renderListWithTemplate(template, parent, list, callback, category) {
   list.forEach(item => {
     const clone = template.content.cloneNode(true);
-    const templateWithData = callback(clone, item);
+    const templateWithData = callback(clone, item, category);
     parent.appendChild(templateWithData);
   })
 }

@@ -76,6 +76,11 @@ header {
 .logo--square > div {
   margin-top: -1.7em;
 }
+/* homepage styles*/
+.product-grid {
+  display: flex;
+}
+
 /* utility classes */
 .highlight {
   color: var(--tertiary-color);
@@ -228,6 +233,22 @@ button {
   .cart-card {
     font-size: inherit;
     grid-template-columns: 150px auto 15%;
+  }
+
+  /* Homepage styles*/
+  .product-grid{
+   justify-content: space-around;
+  }
+  .product-grid li {
+    list-style: none;
+    font-size: 0.60em;
+  }
+  .product-grid img {
+    width: 20%;
+    height: auto;
+  }
+  .product-grid li a {
+    text-decoration: none;
   }
 }
 

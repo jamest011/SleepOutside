@@ -2,19 +2,21 @@ import { setLocalStorage,getLocalStorage, loadHeaderFooter } from './utils.js';
 
 loadHeaderFooter();
 export default class ProductDetails {
-  constructor(productId, dataSource){
+  constructor(productId, dataSource, category){
     this.productId = productId;
     this.product = {};
+    this.category = category;
     this.dataSource = dataSource;
-    
   }
+
   async init() {
-    this.product = await this.dataSource.findProductById(this.productId);
+    this.product = await this.dataSource.findProductById(this.productId, this.category);
     document.querySelector('main').innerHTML = this.renderProductDetails();
     // add listener to Add to Cart button
     document.getElementById('addToCart')
             .addEventListener('click', this.addToCart.bind(this));
   }
+
   productInCart(cart){
    return cart.filter((product)=>product.Id == this.product.Id).length > 0;
   }
