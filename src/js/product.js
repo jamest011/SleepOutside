@@ -1,8 +1,8 @@
 import ProductDetails from './productDetails.js';
 import { getParam } from './utils.js';
-import ProductData from './productData.js';
+import externalServices from './externalServices.js';
 
-const dataSource = new ProductData();
+const dataSource = new externalServices();
 const productId = getParam('product');
 const category =  getParam('category');
 
