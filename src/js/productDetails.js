@@ -18,11 +18,11 @@ export default class ProductDetails {
   }
 
   productInCart(cart){
-   return cart.filter((product)=>product.Id == this.product.Id).length > 0;
+   return Object.values(cart).filter((product)=>product.Id == this.product.Id).length > 0;
   }
   addToCart() {
      //Check if there is any data for the cart in local storage
-     let cart = getLocalStorage('so-cart');
+     let cart = Array.from(getLocalStorage('so-cart'));
      if (cart == null){
       cart = [];
       this.product.count = 1;
