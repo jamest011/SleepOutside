@@ -79,6 +79,16 @@ header {
 /* homepage styles*/
 .product-grid {
   display: flex;
+  flex-flow: wrap;
+}
+/* cart index styles*/
+#checkoutbtn {
+  background-color: #a4b8c4;
+  border-radius: 10%;
+  font-size: 1.5em;
+}
+#checkoutbtn a {
+  text-decoration: none;
 }
 
 /* utility classes */
