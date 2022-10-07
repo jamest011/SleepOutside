@@ -1,9 +1,10 @@
 const baseURL = 'http://server-nodejs.cit.byui.edu:3000/';
 async function convertToJson(res) {
+  const data = await res.json();
   if (res.ok) {
-    return res.json();
+    return data
   } else {
-    throw new Error('Bad Response');
+    throw { name: 'servicesError', message: data };
   }
 }
 
@@ -20,11 +21,7 @@ export default class ExternalServices {
       .then((data) => data.Result);
   }
   async findProductById(id) {
-    //const products = await this.getData()
-    //return products.find((item) => item.Id === id);
-    // the API allows us to pull products directly from it by ID...so we can change this method as well to take advantage of that.
-    return await fetch(baseURL + `product/${id}`)
-      .then(convertToJson)
+    return await fetch(baseURL + `product/${id}`).then(convertToJson)
       .then((data) => data.Result);
   }
   async checkout(payload) {

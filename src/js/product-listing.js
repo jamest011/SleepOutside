@@ -1,6 +1,6 @@
-import ProductList from '../js/productList.js';
-import externalServices from '../js/externalServices.js';
-import { loadHeaderFooter, getParam } from '../js/utils.js';
+import ProductList from './productList.js';
+import externalServices from './externalServices.js';
+import { loadHeaderFooter, getParam } from './utils.js';
 loadHeaderFooter();
 
 // first create an instance of our externalServices class. 
