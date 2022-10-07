@@ -16,12 +16,31 @@ export default class ProductDetails {
       .getElementById('addToCart')
       .addEventListener('click', this.addToCart.bind(this));
   }
+
+  productInCart(cart){
+    console.log(this.product);
+   return Object.values(cart).filter((product)=>product.Id == this.product.Id).length > 0;
+  }
   addToCart() {
-    // to fix the cart we need to get anything that is in the cart already.
-    let cartContents = getLocalStorage('so-cart');
-    //check to see if there was anything there
-    if (!cartContents) {
-      cartContents = [];
+     //Check if there is any data for the cart in local storage
+     let cart = Array.from(getLocalStorage('so-cart'));
+     if (cart == null){
+      cart = [];
+      this.product.count = 1;
+      cart.push(this.product);
+        setLocalStorage('so-cart', cart);
+     }else if (!this.productInCart(cart)){
+      this.product.count = 1;
+      cart.push(this.product);
+      setLocalStorage('so-cart', cart);
+     }else {
+      for(let iProduct = 0; iProduct < cart.length ; iProduct++){
+        if(cart[iProduct].Id == this.product.Id){
+          cart[iProduct].count++;
+          setLocalStorage('so-cart', cart);  
+          break;
+        }
+      }
     }
     // then add the current product to the list
     cartContents.push(this.product);
